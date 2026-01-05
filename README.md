@@ -165,6 +165,24 @@ The PINN successfully learns valid eigenfunctions of the infinite square well.
   <img src="pinn_plot.png" width="600" alt="PINN Results Plot">
 </div>
 
+### Diagnostics
+```bash
+n=1 | E_PINN = 0.049934 | E_exact = 0.049348
+n=2 | E_PINN = 0.199889 | E_exact = 0.197392
+n=3 | E_PINN = 0.436916 | E_exact = 0.444132
+
+Overlaps ⟨ψ_n | ψ_m⟩:
+<1|1> = 3.818e-02   <1|2> = 1.293e-02   <1|3> = 2.310e-03   
+<2|1> = 1.293e-02   <2|2> = 4.073e+01   <2|3> = -5.766e-04   
+<3|1> = 2.310e-03   <3|2> = -5.766e-04   <3|3> = 1.833e+00   
+
+Node counts:
+n=1 → nodes ≈ 2
+n=2 → nodes ≈ 3
+n=3 → nodes ≈ 4
+```
+
+
 ### Insights from the Spectrum
 * **High Fidelity for Lower Modes:** The PINN solutions for the ground state ($n=1$, blue) and first excited state ($n=2$, green) show excellent agreement with the exact analytical solutions (dashed lines).
 * **Boundary Enforcement:** The hard constraints imposed by the network architecture ensure the wavefunction strictly vanishes at $x=0$ and $x=10$.
